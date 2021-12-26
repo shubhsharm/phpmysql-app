@@ -12,6 +12,6 @@ node{
     }
  stage('PUSH image to Docker Hub')
     {
-        sh 'sudo docker push 08170/php:73'
+        sh 'sudo docker push 08170/phpapp:1.0.1'
     }
 }
