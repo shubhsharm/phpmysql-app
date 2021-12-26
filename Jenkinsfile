@@ -12,10 +12,6 @@ node{
     }
  stage('PUSH image to Docker Hub')
     {
-        withCredentials([string(credentialsId: 'DockerHubPassword', variable: 'DHPWD')]) 
-        {
-            sh "docker login -u 08170 --password ${DHPWD}"
-        }
-        sh 'docker push 08170/php:73'
+        sh 'sudo docker push 08170/php:73'
     }
 }
